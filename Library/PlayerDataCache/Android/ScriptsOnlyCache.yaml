@@ -15,7 +15,6 @@ ScriptsOnlyBuild:
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
-    - UnityEditor.TestTools.TestRunner.TestListCacheData
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
@@ -48,25 +47,25 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9682}
+      Script: {instanceID: 9680}
+    - Class: 114
+      Script: {instanceID: 9828}
     - Class: 114
       Script: {instanceID: 9830}
     - Class: 114
-      Script: {instanceID: 9832}
-    - Class: 114
-      Script: {instanceID: 9870}
+      Script: {instanceID: 9868}
     - Class: 114
       Script: {instanceID: 10094}
     - Class: 114
       Script: {instanceID: 10238}
     - Class: 114
-      Script: {instanceID: 10572}
+      Script: {instanceID: 10580}
     - Class: 114
-      Script: {instanceID: 11012}
+      Script: {instanceID: 10636}
     - Class: 114
-      Script: {instanceID: 11352}
+      Script: {instanceID: 11026}
     - Class: 114
-      Script: {instanceID: 17570}
+      Script: {instanceID: 11368}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -103,25 +102,25 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9682}
+      Script: {instanceID: 9680}
     - Class: 114
-      Script: {instanceID: 9830}
+      Script: {instanceID: 9828}
     - Class: 114
-      Script: {instanceID: 9870}
+      Script: {instanceID: 9868}
     - Class: 114
       Script: {instanceID: 10094}
     - Class: 114
       Script: {instanceID: 10238}
     - Class: 114
-      Script: {instanceID: 10572}
+      Script: {instanceID: 10386}
     - Class: 114
-      Script: {instanceID: 11012}
+      Script: {instanceID: 10580}
     - Class: 114
-      Script: {instanceID: 11352}
+      Script: {instanceID: 10774}
     - Class: 114
-      Script: {instanceID: 28254}
+      Script: {instanceID: 11026}
     - Class: 114
-      Script: {instanceID: 28260}
+      Script: {instanceID: 11368}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -158,25 +157,25 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9682}
+      Script: {instanceID: 9680}
     - Class: 114
-      Script: {instanceID: 9830}
+      Script: {instanceID: 9828}
     - Class: 114
-      Script: {instanceID: 9870}
+      Script: {instanceID: 9868}
     - Class: 114
       Script: {instanceID: 10094}
     - Class: 114
       Script: {instanceID: 10238}
     - Class: 114
-      Script: {instanceID: 10572}
+      Script: {instanceID: 10386}
     - Class: 114
-      Script: {instanceID: 11012}
+      Script: {instanceID: 10478}
     - Class: 114
-      Script: {instanceID: 11352}
+      Script: {instanceID: 10580}
     - Class: 114
-      Script: {instanceID: 28254}
+      Script: {instanceID: 11026}
     - Class: 114
-      Script: {instanceID: 28266}
+      Script: {instanceID: 11368}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -215,23 +214,23 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9682}
+      Script: {instanceID: 9680}
     - Class: 114
-      Script: {instanceID: 9830}
+      Script: {instanceID: 9828}
     - Class: 114
-      Script: {instanceID: 9870}
+      Script: {instanceID: 9868}
     - Class: 114
       Script: {instanceID: 10094}
     - Class: 114
       Script: {instanceID: 10238}
     - Class: 114
-      Script: {instanceID: 10572}
+      Script: {instanceID: 10580}
     - Class: 114
-      Script: {instanceID: 11012}
+      Script: {instanceID: 11026}
     - Class: 114
-      Script: {instanceID: 11352}
+      Script: {instanceID: 11186}
     - Class: 114
-      Script: {instanceID: 22300}
+      Script: {instanceID: 11368}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -268,21 +267,21 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9682}
+      Script: {instanceID: 9680}
     - Class: 114
-      Script: {instanceID: 9830}
+      Script: {instanceID: 9828}
     - Class: 114
-      Script: {instanceID: 9870}
+      Script: {instanceID: 9868}
     - Class: 114
       Script: {instanceID: 10094}
     - Class: 114
       Script: {instanceID: 10238}
     - Class: 114
-      Script: {instanceID: 10572}
+      Script: {instanceID: 10580}
     - Class: 114
-      Script: {instanceID: 11012}
+      Script: {instanceID: 11026}
     - Class: 114
-      Script: {instanceID: 11352}
+      Script: {instanceID: 11368}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -498,6 +497,12 @@ ScriptsOnlyBuild:
     className: TMP_Asset
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: DisplayHighscore
+  - hash:
+      serializedVersion: 2
       Hash: d4020bafcd3ccbb5601a6e6c8ac78be0
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -514,6 +519,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_SpriteAnimator
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: DisplayLevel
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -540,6 +551,18 @@ ScriptsOnlyBuild:
     className: RawImage
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayerManagementEndlessMode
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayerManagementStoryMode
+  - hash:
+      serializedVersion: 2
       Hash: 5ad4aa237d47ac2bab17bacb672edf7a
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -556,6 +579,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: SignalReceiver
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: DisplayScore
   - hash:
       serializedVersion: 2
       Hash: 5ad4aa237d47ac2bab17bacb672edf7a
@@ -628,6 +657,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_StyleSheet
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CheckForSave
   - hash:
       serializedVersion: 2
       Hash: df434544c9f7b33d1cc7e635b180d279
@@ -718,42 +753,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: PlayerManagementEndlessMode
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: CheckForSave
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: DisplayHighscore
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: DisplayScore
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: DisplayLevel
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: PlayerManagementStoryMode
   platform: 13
   scenePathNames:
   - Assets/Scenes/MainMenu.unity
