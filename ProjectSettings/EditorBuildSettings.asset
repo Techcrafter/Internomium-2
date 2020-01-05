@@ -14,4 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameMenu.unity
     guid: f0a80212aad7a794682cec5a831ac382
+  - enabled: 1
+    path: Assets/Scenes/Game/EndlessMode.unity
+    guid: 8ff05492077a1c14686cbaefed594324
+  - enabled: 1
+    path: Assets/Scenes/Game/GameOver.unity
+    guid: 2d0a83e5afb64e84ca21672fe336cbd7
   m_configObjects: {}

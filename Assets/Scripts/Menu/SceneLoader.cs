@@ -13,13 +13,13 @@ public class SceneLoader : MonoBehaviour {
 		LoadingText.SetActive(false);
     }
 	
-	public void loadScene(int level)
+	public void LoadScene(int level)
 	{
 		LoadingText.SetActive(true);
 		Application.LoadLevel(level);
 	}
 	
-	public void quitGame()
+	public void QuitGame()
 	{
 		LoadingText.SetActive(true);
 		Application.Quit();

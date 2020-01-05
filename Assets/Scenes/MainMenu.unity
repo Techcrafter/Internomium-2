@@ -301,6 +301,7 @@ GameObject:
   - component: {fileID: 776711365}
   - component: {fileID: 776711364}
   - component: {fileID: 776711368}
+  - component: {fileID: 776711369}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -405,7 +406,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6f789a36b5cf9145ad24fb96fe1db5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LoadingText: {fileID: 0}
+--- !u!114 &776711369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 776711363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72981fbd114566e48a1ad6de83186b25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &875999429
 GameObject:
   m_ObjectHideFlags: 0
@@ -419,7 +431,7 @@ GameObject:
   - component: {fileID: 875999432}
   - component: {fileID: 875999431}
   m_Layer: 5
-  m_Name: QuitGameButton
+  m_Name: QuitButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -468,7 +480,7 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 0.5518868, b: 0.5518868, a: 1}
     m_HighlightedColor: {r: 1, g: 0.3537736, b: 0.3537736, a: 1}
     m_PressedColor: {r: 1, g: 0, b: 0, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_SelectedColor: {r: 1, g: 0.5551085, b: 0, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -489,7 +501,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 776711368}
-        m_MethodName: quitGame
+        m_MethodName: QuitGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1075,7 +1087,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 776711368}
-        m_MethodName: loadScene
+        m_MethodName: LoadScene
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1281,7 +1293,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 776711368}
-        m_MethodName: loadScene
+        m_MethodName: LoadScene
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

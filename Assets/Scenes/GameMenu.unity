@@ -131,8 +131,9 @@ GameObject:
   - component: {fileID: 327727089}
   - component: {fileID: 327727091}
   - component: {fileID: 327727090}
+  - component: {fileID: 327727092}
   m_Layer: 5
-  m_Name: EndlessText
+  m_Name: HighscoreText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -197,6 +198,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 327727088}
   m_CullTransparentMesh: 0
+--- !u!114 &327727092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 327727088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f04351967cc3bc44a9bc8aa6dd8a3f5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &338441337
 GameObject:
   m_ObjectHideFlags: 0
@@ -209,7 +222,7 @@ GameObject:
   - component: {fileID: 338441340}
   - component: {fileID: 338441339}
   m_Layer: 5
-  m_Name: EndlessInfoText
+  m_Name: HighscoreInfoText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -564,7 +577,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 776711368}
-        m_MethodName: loadScene
+        m_MethodName: LoadScene
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1152,7 +1165,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 776711368}
-        m_MethodName: loadScene
+        m_MethodName: LoadScene
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1209,6 +1222,7 @@ GameObject:
   - component: {fileID: 1518807414}
   - component: {fileID: 1518807416}
   - component: {fileID: 1518807415}
+  - component: {fileID: 1518807417}
   m_Layer: 5
   m_Name: LevelText
   m_TagString: Untagged
@@ -1275,6 +1289,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1518807413}
   m_CullTransparentMesh: 0
+--- !u!114 &1518807417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1518807413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d3573b727d10744da5859306d111955, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1961862045
 GameObject:
   m_ObjectHideFlags: 0
@@ -1592,16 +1618,16 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 776711368}
-        m_MethodName: 
-        m_Mode: 1
+        m_MethodName: LoadScene
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 4
+          m_IntArgument: 5
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 0
 --- !u!114 &2110738212
 MonoBehaviour:
   m_ObjectHideFlags: 0
