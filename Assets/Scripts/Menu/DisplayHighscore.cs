@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class DisplayHighscore : MonoBehaviour
 {
-	private Text HighscoreText;
+	Text HighscoreText;
 	
     // Start is called before the first frame update
     void Start()

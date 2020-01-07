@@ -5,14 +5,25 @@ using UnityEngine.UI;
 
 public class PlayerManagementEndlessMode : MonoBehaviour
 {
-	private Text HpText;
-	private Text CoinsText;
-	private Text ScoreText;
+	Text HpText;
+	Text CoinsText;
+	Text ScoreText;
 	
-	private GameObject NewHighscoreText;
+	GameObject NewHighscoreText;
 	
-	private Scrollbar HorizontalScrollbar;
-	private Scrollbar VerticalScrollbar;
+	Scrollbar HorizontalScrollbar;
+	Scrollbar VerticalScrollbar;
+	
+	RectTransform CanvasRectTransform;
+	
+	GameObject PlayerMissile001;
+	
+	SoundManager SoundManager;
+	
+	public AudioClip PlayerMissile001Sound;
+	public AudioClip TakeNormalHitSound;
+	public AudioClip Collect10CoinsSound;
+	public AudioClip Collect1HPSound;
 	
 	float angle;
 	float cacheX;
@@ -26,15 +37,21 @@ public class PlayerManagementEndlessMode : MonoBehaviour
 		PlayerPrefs.SetFloat("HP", 3);
 		PlayerPrefs.SetFloat("Score", 0);
 		
-        HpText = GameObject.Find("HpText").GetComponent(typeof(Text)) as Text;
-		CoinsText = GameObject.Find("CoinsText").GetComponent(typeof(Text)) as Text;
-		ScoreText = GameObject.Find("ScoreText").GetComponent(typeof(Text)) as Text;
+        HpText = GameObject.Find("HpText").GetComponent<Text>();
+		CoinsText = GameObject.Find("CoinsText").GetComponent<Text>();
+		ScoreText = GameObject.Find("ScoreText").GetComponent<Text>();
 		
 		NewHighscoreText = GameObject.Find("NewHighscoreText");
 		NewHighscoreText.SetActive(false);
 		
 		HorizontalScrollbar = GameObject.Find("HorizontalScrollbar").GetComponent(typeof(Scrollbar)) as Scrollbar;
 		VerticalScrollbar = GameObject.Find("VerticalScrollbar").GetComponent(typeof(Scrollbar)) as Scrollbar;
+		
+		CanvasRectTransform = GameObject.Find("Canvas").GetComponent<RectTransform>();
+		
+		PlayerMissile001 = GameObject.Find("PlayerMissile001");
+		
+		SoundManager = GameObject.Find("SoundPlayer").GetComponent<SoundManager>();
 		
 		movementSpeed = PlayerPrefs.GetFloat("MovementSpeed");
 		rotationSpeed = PlayerPrefs.GetFloat("RotationSpeed");
@@ -45,13 +62,15 @@ public class PlayerManagementEndlessMode : MonoBehaviour
     {
 		angle = transform.eulerAngles.magnitude * Mathf.Deg2Rad;
 		angle += 1.6f;
+		cacheX = transform.position.x;
+		cacheY = transform.position.y;
         cacheX -= (Mathf.Cos (angle) * ((VerticalScrollbar.value - 0.5f) * -movementSpeed)) * Time.deltaTime;
 		cacheY -= (Mathf.Sin (angle) * ((VerticalScrollbar.value - 0.5f) * -movementSpeed)) * Time.deltaTime;
-		if(cacheX > -9.7f && cacheX < 9.7f)
+		if(cacheX > (-13.2f*(CanvasRectTransform.rect.width/800)) && cacheX < (13.2f*(CanvasRectTransform.rect.width/800)))
 		{
 			transform.position = new Vector3(cacheX, transform.position.y, 0);
 		}
-		if(cacheY > -4.5f && cacheY < 4.5f)
+		if(cacheY > (-7.65f*(CanvasRectTransform.rect.height/600)) && cacheY < (10.5f*(CanvasRectTransform.rect.height/600)))
 		{
 			transform.position = new Vector3(transform.position.x, cacheY, 0);
 		}
@@ -73,6 +92,45 @@ public class PlayerManagementEndlessMode : MonoBehaviour
 	
 	public void Shoot()
 	{
-		
+		switch(PlayerPrefs.GetFloat("Missile"))
+		{
+			case 1:
+				SoundManager.PlayClip(PlayerMissile001Sound);
+				Destroy(Instantiate(PlayerMissile001, transform.position, transform.rotation), 3);
+				break;
+		}
+	}
+	
+	public void TakeHit(int hp)
+	{
+		switch(hp)
+		{
+			case 1:
+				SoundManager.PlayClip(TakeNormalHitSound);
+				break;
+		}
+		PlayerPrefs.SetFloat("HP", PlayerPrefs.GetFloat("HP") - hp);
+	}
+	
+	public void CollectHP(int hp)
+	{
+		switch(hp)
+		{
+			case 1:
+				SoundManager.PlayClip(Collect1HPSound);
+				break;
+		}
+		PlayerPrefs.SetFloat("HP", PlayerPrefs.GetFloat("HP") + hp);
+	}
+	
+	public void CollectCoins(int coins)
+	{
+		switch(coins)
+		{
+			case 10:
+				SoundManager.PlayClip(Collect10CoinsSound);
+				break;
+		}
+		PlayerPrefs.SetFloat("Coins", PlayerPrefs.GetFloat("Coins") + coins);
 	}
 }
