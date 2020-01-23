@@ -6,6 +6,8 @@ TagManager:
   tags:
   - PlayerMissile001
   - EnemyMissile001
+  - 1Hp
+  - 10Coins
   layers:
   - Default
   - TransparentFX

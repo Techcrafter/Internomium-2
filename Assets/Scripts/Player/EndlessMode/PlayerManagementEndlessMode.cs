@@ -16,7 +16,7 @@ public class PlayerManagementEndlessMode : MonoBehaviour
 	
 	RectTransform CanvasRectTransform;
 	
-	GameObject PlayerMissile001;
+	public GameObject PlayerMissile001;
 	
 	SoundManager SoundManager;
 	
@@ -48,8 +48,6 @@ public class PlayerManagementEndlessMode : MonoBehaviour
 		VerticalScrollbar = GameObject.Find("VerticalScrollbar").GetComponent(typeof(Scrollbar)) as Scrollbar;
 		
 		CanvasRectTransform = GameObject.Find("Canvas").GetComponent<RectTransform>();
-		
-		PlayerMissile001 = GameObject.Find("PlayerMissile001");
 		
 		SoundManager = GameObject.Find("SoundPlayer").GetComponent<SoundManager>();
 		
@@ -101,36 +99,27 @@ public class PlayerManagementEndlessMode : MonoBehaviour
 		}
 	}
 	
-	public void TakeHit(int hp)
+	void OnTriggerEnter2D(Collider2D collider)
 	{
-		switch(hp)
+		switch(collider.gameObject.tag)
 		{
-			case 1:
+			//Take hit
+			case "EnemyMissile001":
 				SoundManager.PlayClip(TakeNormalHitSound);
+				PlayerPrefs.SetFloat("HP", PlayerPrefs.GetFloat("HP") - 1);
 				break;
-		}
-		PlayerPrefs.SetFloat("HP", PlayerPrefs.GetFloat("HP") - hp);
-	}
-	
-	public void CollectHP(int hp)
-	{
-		switch(hp)
-		{
-			case 1:
+				
+			//Collect HP
+			case "1Hp":
 				SoundManager.PlayClip(Collect1HPSound);
+				PlayerPrefs.SetFloat("HP", PlayerPrefs.GetFloat("HP") + 1);
 				break;
-		}
-		PlayerPrefs.SetFloat("HP", PlayerPrefs.GetFloat("HP") + hp);
-	}
-	
-	public void CollectCoins(int coins)
-	{
-		switch(coins)
-		{
-			case 10:
+				
+			//Collect Coins
+			case "10Coins":
 				SoundManager.PlayClip(Collect10CoinsSound);
+				PlayerPrefs.SetFloat("Coins", PlayerPrefs.GetFloat("Coins") + 10);
 				break;
 		}
-		PlayerPrefs.SetFloat("Coins", PlayerPrefs.GetFloat("Coins") + coins);
 	}
 }
