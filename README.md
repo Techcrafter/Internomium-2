@@ -1,2 +1,2 @@
 # Internomium-2
-The second part of the 2D space shooter game made with Unity. Especially designed for mobile platforms.
+The second part of the 2D space shooter game made with Unity and especially designed for mobile platforms.
