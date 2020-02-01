@@ -986,7 +986,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 756a1d95efb39194c81dff8088646a1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Enemy001: {fileID: 418281821664531060, guid: a38b92c3d509cb6439c8afb9f6c1bf7f, type: 3}
+  Enemy001: {fileID: 7807390524617205324, guid: a38b92c3d509cb6439c8afb9f6c1bf7f,
+    type: 3}
   SpawnEnemy001: {fileID: 8300000, guid: 43e7cd81d1176b7488824938f6ea79f1, type: 3}
 --- !u!1 &1156059105
 GameObject:

@@ -25,6 +25,8 @@ public class PlayerManagementEndlessMode : MonoBehaviour
 	public AudioClip Collect10CoinsSound;
 	public AudioClip Collect1HPSound;
 	
+	bool hitCooldown;
+	
 	float angle;
 	float cacheX;
 	float cacheY;
@@ -62,8 +64,8 @@ public class PlayerManagementEndlessMode : MonoBehaviour
 		angle += 1.6f;
 		cacheX = transform.position.x;
 		cacheY = transform.position.y;
-        cacheX -= (Mathf.Cos (angle) * ((VerticalScrollbar.value - 0.5f) * -movementSpeed)) * Time.deltaTime;
-		cacheY -= (Mathf.Sin (angle) * ((VerticalScrollbar.value - 0.5f) * -movementSpeed)) * Time.deltaTime;
+        cacheX -= (Mathf.Cos (angle) * ((VerticalScrollbar.value - 0.5f) * -movementSpeed)) * Time.deltaTime * 2;
+		cacheY -= (Mathf.Sin (angle) * ((VerticalScrollbar.value - 0.5f) * -movementSpeed)) * Time.deltaTime * 2;
 		if(cacheX > (-13.2f*(CanvasRectTransform.rect.width/800)) && cacheX < (13.2f*(CanvasRectTransform.rect.width/800)))
 		{
 			transform.position = new Vector3(cacheX, transform.position.y, 0);
@@ -73,7 +75,7 @@ public class PlayerManagementEndlessMode : MonoBehaviour
 			transform.position = new Vector3(transform.position.x, cacheY, 0);
 		}
 		
-		gameObject.transform.Rotate(0f, 0f, (HorizontalScrollbar.value - 0.5f) * -rotationSpeed);
+		gameObject.transform.Rotate(0f, 0f, (HorizontalScrollbar.value - 0.5f) * -rotationSpeed * 2);
 		
 		HpText.text = PlayerPrefs.GetFloat("HP").ToString();
 		if(PlayerPrefs.GetFloat("HP") <= 0)
@@ -84,6 +86,7 @@ public class PlayerManagementEndlessMode : MonoBehaviour
 		ScoreText.text = PlayerPrefs.GetFloat("Score").ToString();
 		if(PlayerPrefs.GetFloat("Score") > PlayerPrefs.GetFloat("Highscore"))
 		{
+			PlayerPrefs.SetFloat("Highscore", PlayerPrefs.GetFloat("Score"));
 			NewHighscoreText.SetActive(true);
 		}
     }
@@ -99,26 +102,65 @@ public class PlayerManagementEndlessMode : MonoBehaviour
 		}
 	}
 	
+	IEnumerator TakeHit(int damage)
+	{
+		if(hitCooldown == false)
+		{
+			hitCooldown = true;
+			SoundManager.PlayClip(TakeNormalHitSound);
+			gameObject.GetComponent<SpriteRenderer>().enabled = false;
+			PlayerPrefs.SetFloat("HP", PlayerPrefs.GetFloat("HP") - damage);
+			int i = 0;
+			while(i != 2)
+			{
+				i++;
+				yield return new WaitForSeconds(0.25f);
+				gameObject.GetComponent<SpriteRenderer>().enabled = true;
+				yield return new WaitForSeconds(0.25f);
+				gameObject.GetComponent<SpriteRenderer>().enabled = false;
+			}
+			while(i != 4)
+			{
+				i++;
+				yield return new WaitForSeconds(0.18f);
+				gameObject.GetComponent<SpriteRenderer>().enabled = true;
+				yield return new WaitForSeconds(0.18f);
+				gameObject.GetComponent<SpriteRenderer>().enabled = false;
+			}
+			while(i != 8)
+			{
+				i++;
+				yield return new WaitForSeconds(0.1f);
+				gameObject.GetComponent<SpriteRenderer>().enabled = true;
+				yield return new WaitForSeconds(0.1f);
+				gameObject.GetComponent<SpriteRenderer>().enabled = false;
+			}
+			gameObject.GetComponent<SpriteRenderer>().enabled = true;
+			hitCooldown = false;
+		}
+	}
+	
 	void OnTriggerEnter2D(Collider2D collider)
 	{
 		switch(collider.gameObject.tag)
 		{
 			//Take hit
 			case "EnemyMissile001":
-				SoundManager.PlayClip(TakeNormalHitSound);
-				PlayerPrefs.SetFloat("HP", PlayerPrefs.GetFloat("HP") - 1);
+				StartCoroutine(TakeHit(1));
 				break;
-				
-			//Collect HP
-			case "1Hp":
-				SoundManager.PlayClip(Collect1HPSound);
-				PlayerPrefs.SetFloat("HP", PlayerPrefs.GetFloat("HP") + 1);
-				break;
-				
+			
 			//Collect Coins
 			case "10Coins":
 				SoundManager.PlayClip(Collect10CoinsSound);
 				PlayerPrefs.SetFloat("Coins", PlayerPrefs.GetFloat("Coins") + 10);
+				Destroy(collider.gameObject);
+				break;
+			
+			//Collect HP
+			case "1Hp":
+				SoundManager.PlayClip(Collect1HPSound);
+				PlayerPrefs.SetFloat("HP", PlayerPrefs.GetFloat("HP") + 1);
+				Destroy(collider.gameObject);
 				break;
 		}
 	}
