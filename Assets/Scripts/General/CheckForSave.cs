@@ -11,7 +11,7 @@ public class CheckForSave : MonoBehaviour
 		{
 			PlayerPrefs.SetFloat("MovementSpeed", 1);
 			PlayerPrefs.SetFloat("RotationSpeed", 1);
-			PlayerPrefs.SetFloat("Missile", 1);
+			PlayerPrefs.SetFloat("MissilesLevel", 1);
 			PlayerPrefs.SetFloat("Level", 1);
 		}
     }

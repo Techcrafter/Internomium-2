@@ -93,7 +93,7 @@ public class PlayerManagementEndlessMode : MonoBehaviour
 	
 	public void Shoot()
 	{
-		switch(PlayerPrefs.GetFloat("Missile"))
+		switch(PlayerPrefs.GetFloat("MissilesLevel"))
 		{
 			case 1:
 				SoundManager.PlayClip(PlayerMissile001Sound);

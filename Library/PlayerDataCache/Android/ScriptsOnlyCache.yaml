@@ -2,6 +2,7 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - CheckForSave
+    - DisplayCoins
     - DisplayHighscore
     - DisplayLevel
     - DisplayScore
@@ -9,6 +10,7 @@ ScriptsOnlyBuild:
     - EnemySpawnerEndlessMode
     - PlayerManagementEndlessMode
     - SceneLoader
+    - ShopManager
     - SoundManager
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
@@ -69,31 +71,31 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9678}
-    - Class: 114
-      Script: {instanceID: 9826}
+      Script: {instanceID: 9680}
     - Class: 114
       Script: {instanceID: 9828}
     - Class: 114
-      Script: {instanceID: 9866}
+      Script: {instanceID: 9830}
     - Class: 114
-      Script: {instanceID: 10014}
+      Script: {instanceID: 9868}
     - Class: 114
-      Script: {instanceID: 10094}
+      Script: {instanceID: 10016}
     - Class: 114
-      Script: {instanceID: 10238}
+      Script: {instanceID: 10096}
     - Class: 114
-      Script: {instanceID: 10316}
+      Script: {instanceID: 10240}
     - Class: 114
-      Script: {instanceID: 10582}
+      Script: {instanceID: 10318}
     - Class: 114
-      Script: {instanceID: 10638}
+      Script: {instanceID: 10584}
     - Class: 114
-      Script: {instanceID: 11028}
+      Script: {instanceID: 10640}
     - Class: 114
-      Script: {instanceID: 11308}
+      Script: {instanceID: 11030}
     - Class: 114
-      Script: {instanceID: 11372}
+      Script: {instanceID: 11310}
+    - Class: 114
+      Script: {instanceID: 11374}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -125,30 +127,34 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9678}
+      Script: {instanceID: 9680}
     - Class: 114
-      Script: {instanceID: 9826}
+      Script: {instanceID: 9828}
     - Class: 114
-      Script: {instanceID: 9866}
+      Script: {instanceID: 9868}
     - Class: 114
-      Script: {instanceID: 10094}
+      Script: {instanceID: 10096}
     - Class: 114
-      Script: {instanceID: 10238}
+      Script: {instanceID: 10240}
     - Class: 114
-      Script: {instanceID: 10388}
+      Script: {instanceID: 10390}
     - Class: 114
-      Script: {instanceID: 10582}
+      Script: {instanceID: 10584}
     - Class: 114
-      Script: {instanceID: 10776}
+      Script: {instanceID: 10778}
     - Class: 114
-      Script: {instanceID: 11028}
+      Script: {instanceID: 11030}
     - Class: 114
-      Script: {instanceID: 11372}
+      Script: {instanceID: 11374}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -185,25 +191,25 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9678}
+      Script: {instanceID: 9680}
     - Class: 114
-      Script: {instanceID: 9826}
+      Script: {instanceID: 9828}
     - Class: 114
-      Script: {instanceID: 9866}
+      Script: {instanceID: 9868}
     - Class: 114
-      Script: {instanceID: 10094}
+      Script: {instanceID: 10096}
     - Class: 114
-      Script: {instanceID: 10238}
+      Script: {instanceID: 10240}
     - Class: 114
-      Script: {instanceID: 10388}
+      Script: {instanceID: 10390}
     - Class: 114
-      Script: {instanceID: 10480}
+      Script: {instanceID: 10482}
     - Class: 114
-      Script: {instanceID: 10582}
+      Script: {instanceID: 10584}
     - Class: 114
-      Script: {instanceID: 11028}
+      Script: {instanceID: 11030}
     - Class: 114
-      Script: {instanceID: 11372}
+      Script: {instanceID: 11374}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -242,23 +248,23 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9678}
+      Script: {instanceID: 9680}
     - Class: 114
-      Script: {instanceID: 9826}
+      Script: {instanceID: 9828}
     - Class: 114
-      Script: {instanceID: 9866}
+      Script: {instanceID: 9868}
     - Class: 114
-      Script: {instanceID: 10094}
+      Script: {instanceID: 10096}
     - Class: 114
-      Script: {instanceID: 10238}
+      Script: {instanceID: 10240}
     - Class: 114
-      Script: {instanceID: 10582}
+      Script: {instanceID: 10584}
     - Class: 114
-      Script: {instanceID: 11028}
+      Script: {instanceID: 11030}
     - Class: 114
-      Script: {instanceID: 11188}
+      Script: {instanceID: 11190}
     - Class: 114
-      Script: {instanceID: 11372}
+      Script: {instanceID: 11374}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -295,21 +301,25 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9678}
+      Script: {instanceID: 9680}
     - Class: 114
-      Script: {instanceID: 9826}
+      Script: {instanceID: 9828}
     - Class: 114
-      Script: {instanceID: 9866}
+      Script: {instanceID: 9868}
     - Class: 114
-      Script: {instanceID: 10094}
+      Script: {instanceID: 10096}
     - Class: 114
-      Script: {instanceID: 10238}
+      Script: {instanceID: 10240}
     - Class: 114
-      Script: {instanceID: 10582}
+      Script: {instanceID: 10584}
     - Class: 114
-      Script: {instanceID: 11028}
+      Script: {instanceID: 11030}
     - Class: 114
-      Script: {instanceID: 11372}
+      Script: {instanceID: 11374}
+    - Class: 114
+      Script: {instanceID: 14556}
+    - Class: 114
+      Script: {instanceID: 14826}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -799,6 +809,18 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: DisplayCoins
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ShopManager
   platform: 13
   scenePathNames:
   - Assets/Scenes/MainMenu.unity
@@ -806,5 +828,5 @@ ScriptsOnlyBuild:
   - Assets/Scenes/GameMenu.unity
   - Assets/Scenes/Game/EndlessMode.unity
   - Assets/Scenes/Game/GameOver.unity
-  playerPath: D:/Jonas Wolf/Documents/Meine Programme/Internomium 2/ver.0.0.1/Internomium
+  playerPath: D:/Jonas Wolf/Documents/Meine Programme/Internomium 2/ver.0.0.2/Internomium
     2.apk
